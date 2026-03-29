@@ -1,3 +1,11 @@
+from nltk.corpus import stopwords
+import nltk
+
+try:
+    stop_words = set(stopwords.words('english'))
+except:
+    nltk.download('stopwords')
+    stop_words = set(stopwords.words('english'))
 import streamlit as st
 import pickle
 import string
